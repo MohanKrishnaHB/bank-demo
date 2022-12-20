@@ -36,7 +36,7 @@
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="javascript:void(0)">
+            <a class="navbar-brand" href="index.html">
                 <img src="assets/logo/logo-white-on-transparent-background.png" alt="Avatar Logo" style="width:130px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -84,10 +84,10 @@
                         <a class="nav-link" href="contact-us.html">Contact Us</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="text" placeholder="Search">
-                    <button class="btn btn-primary" type="button">Search</button>
-                </form>
+                <!-- <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search" id="search-input">
+                    <button class="btn btn-primary" type="button" id="search-botton">Search</button>
+                </form> -->
             </div>
         </div>
     </nav>
@@ -156,10 +156,19 @@
                 </ul>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="input-group mb-3">
-                    <input type="email" class="form-control" placeholder="Email" id="footer-email-input">
-                    <button class="btn btn-success" type="submit" id="footer-email-submit">Submit</button>
-                </div>
+                <form method="post" action="#" onsubmit="footerEmailSubmit()">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email" id="footer-email-input" required>
+                        <button class="btn btn-success" type="submit" id="footer-email-submit">Submit</button>
+                    </div>
+                </form>
+                <script>
+                    function footerEmailSubmit() {
+                        alert("Thank you");
+                        event.preventDefault();
+                        document.getElementById("footer-email-input").value = "";
+                    }
+                </script>
                 <p>Sign-up to get our newsletter and financial updates</p>
             </div>
         </div>
