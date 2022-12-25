@@ -25,13 +25,37 @@ SalesforceInteractions.init({
                 }
             },
             {
-                name: "vehicle_loan_page",
-                isMatch: () => (/bank-demo\/loan\/vehicle-loan.html$/.test(window.location.href)),
+                name: "product_detail",
+                isMatch: () => {
+                    return (
+                        (/bank-demo\/loan\//.test(window.location.href)) || 
+                        (/bank-demo\/banking\//.test(window.location.href)) || 
+                        (/bank-demo\/credit-cards\//.test(window.location.href))
+                    )
+                },
                 contentZones: [
-                    { name: "loan_page_banner", selector: ".container .banner-container" }
+                    { name: "related_products_container", selector: "#related-products-container" }
                 ],
                 interaction: {
-                    name: "VehicleLoanPage"
+                    name: SalesforceInteractions.CatalogObjectInteractionName.ViewCatalogObject,
+                    catalogObject: {
+                        type: "Product",
+                        id: () => {
+                            return SalesforceInteractions.mcis.getLastPathComponentWithoutExtension(window.location.href);
+                        },
+                        attributes: {
+                            name: SalesforceInteractions.resolvers.fromSelector("h2"),
+                            description: SalesforceInteractions.resolvers.fromSelector("h2"),
+                            url: SalesforceInteractions.resolvers.fromHref(),
+                            price: 1,
+                            inventoryCount: 1,
+                            imageUrl: SalesforceInteractions.resolvers.fromSelectorAttribute("img.d-block", "src", (url) => {return url.replace("..", "https://mohankrishnahb.github.io/bank-demo")}),
+
+                        },
+                        relatedCatalogObjects: {
+                            Category: window.location.pathname.replace("/bank-demo/", "").replace("/", "|").replace(".html", "")
+                        }
+                    }
                 }
             }
         ]
