@@ -1,0 +1,4 @@
+id,attribute:parentCategoryId,attribute:department,attribute:name,attribute:url,attribute:imageUrl,attribute:description,attribute:promotable,attribute:archived
+accounts,,TRUE,Banking accounts,,,,TRUE,FALSE
+loans,,TRUE,Loans,,,,TRUE,FALSE
+credit-cards,,TRUE,Credit Cards,,,,TRUE,FALSE

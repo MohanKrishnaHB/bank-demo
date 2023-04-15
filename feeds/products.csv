@@ -1,0 +1,9 @@
+id,attribute:name,attribute:promotable,attribute:archived,attribute:url,attribute:imageUrl,attribute:description,categories,attribute:inventoryCount,attribute:price
+savings,Savings Account,TRUE,FALSE,https://mohankrishnahb.github.io/bank-demo/banking/savings.html,https://mohankrishnahb.github.io/bank-demo/assets/banner/savings.jpeg,,accounts,1,1
+business,Business Account,TRUE,FALSE,https://mohankrishnahb.github.io/bank-demo/banking/business.html,https://mohankrishnahb.github.io/bank-demo/assets/banner/savings.jpeg,,accounts,1,1
+vehicle-loan,Vehicle Loan,TRUE,FALSE,https://mohankrishnahb.github.io/bank-demo/loan/vehicle-loan.html,https://mohankrishnahb.github.io/bank-demo/assets/banner/car-loan.jpeg,Car Loan|bike loan,loans,1,1
+student-loan,Student Loan,TRUE,FALSE,https://mohankrishnahb.github.io/bank-demo/loan/student-loan.html,https://mohankrishnahb.github.io/bank-demo/assets/borrowing-student-loans.png,student loan,loans,1,1
+home-loan,Home Loan,TRUE,FALSE,https://mohankrishnahb.github.io/bank-demo/loan/home-loan.html,https://mohankrishnahb.github.io/bank-demo/assets/banner/home-loan.jpeg,,loans,1,1
+gold,Gold Credit Card,TRUE,FALSE,https://mohankrishnahb.github.io/bank-demo/credit-cards/gold.html,https://mohankrishnahb.github.io/bank-demo/assets/credit-card-freedom-no-logo.png,,credit-cards,1,1
+silver,Silver Credit Card,TRUE,FALSE,https://mohankrishnahb.github.io/bank-demo/credit-cards/silver.html,https://mohankrishnahb.github.io/bank-demo/assets/credit-card-freedom-no-logo.png,,credit-cards,1,1
+platinum,Platinum Credit Card,TRUE,FALSE,https://mohankrishnahb.github.io/bank-demo/credit-cards/platinum.html,https://mohankrishnahb.github.io/bank-demo/assets/credit-card-freedom-no-logo.png,,credit-cards,1,1
